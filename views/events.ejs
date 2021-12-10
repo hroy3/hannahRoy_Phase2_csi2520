@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA_Compatible" content = "IE-Edge">
+        <meta name = "viewport" content  = "width=device-width, initial-scale = 1.0"> 
+        <title>Events</title>
+
+        <link rel="stylesheet" href="../public/css/events_styles.css">
+        <script src="https://kit.fontawesome.com/a9c3ea6bcb.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <!-- Create navbar in header-->
+        <header>
+            <div class = "nav_container">
+                <!--Create and insert a Logo to Replace Title?-->
+                <nav>
+                    <label class = "logo">Task Tracker</label>
+                    <ul>
+                        <li><a class = "active" href = "events">Events</a></li>
+                        <li><a href = "monthly">Monthly</a></li>
+                        <li><a href = "/">Weekly</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+
+        <!-- Add Upcoming Events title section -->
+        <section class = "left_title">
+            <div class = "left_box">
+                <div class = "left_content">
+                    <h1>Upcoming Events</h1>
+                    <p>View upcoming events</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Add Upcoming Events cards -->
+        <section class = "event_cards">
+            <div class = "event_container">
+                <h3 class = "year">2021</h3>
+    
+                <div class = "event">
+                    <div class = "event_left">
+                        <div class = "event_date">
+                            <!-- <p class = "date">Date</p>
+                            <p class = "month">Month</p> -->
+                            <!-- <input class = "date" type = "text" placeholder="Date">
+                            <input class = "month" type = "text" placeholder="Month"> -->
+                            <h4>Add an Event</h4>
+                        </div>
+                    </div>
+    
+                    <div class = "event_right">
+                        <!-- <h4 class = "event_title">Title</h4> -->
+                        <button>Add</button>
+                        <input class = "event_title" name = "event_title" type = "text" placeholder = "Title">
+    
+                        <!-- <p class = "event_description">Description</p> -->
+                        <input class = "event_description" name = "event_description" type = "text" placeholder = "Description">
+                        <input type = date name = "event_date">
+    
+                        <!-- <p class = "event_time">Time</p> -->
+                        <input class = "event_time" name = "event_time" type = "text" placeholder = "Time">
+
+                    </div>
+                </div>
+
+                <div class = "event">
+                    
+                </div>
+
+                
+
+                
+
+                <!-- <div class = "add_event">
+                    <h4 class = "new_event">Create New</h4>
+                </div> -->
+
+            </div>
+        </section>
+
+    </body>
+
+</html>

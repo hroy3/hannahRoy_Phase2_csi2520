@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA_Compatible" content = "IE-Edge">
+        <meta name = "viewport" content  = "width=device-width, initial-scale = 1.0"> 
+        <title>Weekly Planner Page</title>
+
+        <link rel="stylesheet" href="../public/css/weekly_styles.css">
+        <script src="https://kit.fontawesome.com/a9c3ea6bcb.js" crossorigin="anonymous"></script>
+
+        <script src = "../public/js/weekly.js" defer></script>
+    </head>
+
+    <body>
+        <!-- Create navbar in header-->
+        <header>
+            <div class = "nav_container">
+                <!--Create and insert a Logo to Replace Title?-->
+                <nav>
+                    <label class = "logo">Task Tracker</label>
+                    <ul>
+                        <li><a href = "events">Events</a></li>
+                        <li><a href = "monthly">Monthly</a></li>
+                        <li><a class = "active" href = "/">Weekly</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <h1 class = "week_title">Task Planner</h1>
+
+        <h2>Weekly Tasks</h2>
+
+        <section class = "tasks_container">
+            <!-- <button id = delete_task_card>Delete Tasks</button> -->
+            <div class = "task_card">
+                <!-- Create New Task -->
+                    <div id = "add_task_card" >
+                        <!-- <form 
+                            class = "create_new"
+                            method = "post"
+                            action = "/newtaskcard/"
+                        >
+                            <h3>Create New Task</h3>
+                            <progress id = "progress" value = "0" max = "100">0%</progress>
+                            <button>Create New Task</button>
+
+                            <input type = "text" class = "create_new_input" placeholder = "Task Title" name = "task_title" aria-label="new_step">
+                                    
+                            <input type = "text" class = "create_new_input" placeholder = "Add a Step" name = "new_step" aria-label="new_step">
+                            
+                        </form> -->
+                        <div class = "task">
+                            <input type = "text" class = "create_new_input" placeholder = "Task Title" 
+                                id = "task_title" aria-label="new_step">
+                                    
+                            <input type = "text" class = "create_new_input" placeholder = "Add a Step" 
+                                id = "new_step" aria-label="new_step">
+
+                            <button id = "newcardbutton">Create New Task</button>
+                        </div>   
+                    </div>
+
+                    <!-- <div class = "task_card_input">
+                        <% for( var i = 0; i < title.length; i++){ %>
+                            <li class = "task_title_input"> 
+                                <%= title[i] %> </li><% } %>
+
+                        <% for( var i = 0; i < steps.length; i++){ %>
+                            <li class = "task_step_input"> <input type="checkbox" name="check" value="<%= steps[i] %>" /> 
+                            <%= steps[i] %> </li><% } %>   
+                    </div> -->     
+                    
+                </div>
+
+        
+
+        </section>
+
+        <!-- Daily Section -->
+        <section class = "daily_container">
+            <div class = "day">
+                <h3>Monday</h3>
+                <hr>
+                <!-- Add a New Task -->
+                <div class = "new_daily">
+                    <form
+                        method = "post"
+                        action = "/newdailytask/"
+                    >
+                        <input type = "text" name = "newDaily" placeholder="Add a New Task">
+                        <button>Add Task</button>
+
+                        <% for( var i = 0; i < task.length; i++){ %>
+                            <li class = "daily_task_list"><input type="checkbox" name="check" value="<%= task[i] %>" /> 
+                                <%= task[i] %> </li><% } %>
+
+                        <button formaction = "/completetask/" type = "submit">Mark as Completed</button>
+
+                    </form>
+
+
+                    <h4>Completed Tasks</h4>
+                    <% for(var i = 0; i < complete.length; i++){ %>
+                        <li class = "daily_completed"><input type="checkbox" checked><%= complete[i] %> </li>
+                    <% } %>
+                    
+                </div>
+            </div>
+
+            <div class = "day">
+                <h3>Tuesday</h3>
+                <hr>
+
+                <div class = "new_daily">
+                    <form
+                        method = "post"
+                        action = "/newdailytask/"
+                    >
+                        <input type = "text" name = "newDaily" placeholder="Add a New Task">
+                        <button>Add Task</button>
+
+                        <% for( var i = 0; i < task.length; i++){ %>
+                            <li class = "daily_task_list"><input type="checkbox" name="check" value="<%= task[i] %>" /> 
+                                <%= task[i] %> </li><% } %>
+
+                        <button formaction = "/completetask/" type = "submit">Mark as Completed</button>
+
+                    </form>
+
+
+                    <h4>Completed Tasks</h4>
+                    <% for(var i = 0; i < complete.length; i++){ %>
+                        <li class = "daily_completed"><input type="checkbox" checked><%= complete[i] %> </li>
+                    <% } %>
+                </div>
+            </div>
+
+            <div class = "day">
+                <h3>Wednesday</h3>
+                <hr>
+                <div class = "new_daily">
+                    <form
+                    method = "post"
+                    action = "/newdailytask/"
+                >
+                    <input type = "text" name = "newDaily" placeholder="Add a New Task">
+                    <button>Add Task</button>
+
+                    <% for( var i = 0; i < task.length; i++){ %>
+                        <li class = "daily_task_list"><input type="checkbox" name="check" value="<%= task[i] %>" /> 
+                            <%= task[i] %> </li><% } %>
+
+                    <button formaction = "/completetask/" type = "submit">Mark as Completed</button>
+
+                </form>
+
+
+                <h4>Completed Tasks</h4>
+                <% for(var i = 0; i < complete.length; i++){ %>
+                    <li class = "daily_completed"><input type="checkbox" checked><%= complete[i] %> </li>
+                <% } %>
+                </div>
+            </div>
+
+            <div class = "day">
+                <h3>Thursday</h3>
+                <hr>
+                <div class = "new_daily">
+                    <form
+                        method = "post"
+                        action = "/newdailytask/"
+                    >
+                        <input type = "text" name = "newDaily" placeholder="Add a New Task">
+                        <button>Add Task</button>
+
+                        <% for( var i = 0; i < task.length; i++){ %>
+                            <li class = "daily_task_list"><input type="checkbox" name="check" value="<%= task[i] %>" /> 
+                                <%= task[i] %> </li><% } %>
+
+                        <button formaction = "/completetask/" type = "submit">Mark as Completed</button>
+
+                    </form>
+
+
+                    <h4>Completed Tasks</h4>
+                    <% for(var i = 0; i < complete.length; i++){ %>
+                        <li class = "daily_completed"><input type="checkbox" checked><%= complete[i] %> </li>
+                    <% } %>
+                    
+                </div>
+            </div>
+
+            <div class = "day">
+                <h3>Friday</h3>
+                <hr>
+                <div class = "new_daily">
+                    <form
+                        method = "post"
+                        action = "/newdailytask/"
+                    >
+                        <input type = "text" name = "newDaily" placeholder="Add a New Task">
+                        <button>Add Task</button>
+
+                        <% for( var i = 0; i < task.length; i++){ %>
+                            <li class = "daily_task_list"><input type="checkbox" name="check" value="<%= task[i] %>" /> 
+                                <%= task[i] %> </li><% } %>
+
+                        <button formaction = "/completetask/" type = "submit">Mark as Completed</button>
+
+                    </form>
+
+
+                    <h4>Completed Tasks</h4>
+                    <% for(var i = 0; i < complete.length; i++){ %>
+                        <li class = "daily_completed"><input type="checkbox" checked><%= complete[i] %> </li>
+                    <% } %>
+                </div>
+            </div>
+
+            <div class = "day">
+                <h3>Saturday</h3>
+                <hr>
+                <div class = "new_daily">
+                    <form
+                    method = "post"
+                    action = "/newdailytask/"
+                >
+                    <input type = "text" name = "newDaily" placeholder="Add a New Task">
+                    <button>Add Task</button>
+
+                    <% for( var i = 0; i < task.length; i++){ %>
+                        <li class = "daily_task_list"><input type="checkbox" name="check" value="<%= task[i] %>" /> 
+                            <%= task[i] %> </li><% } %>
+
+                    <button formaction = "/completetask/" type = "submit">Mark as Completed</button>
+
+                </form>
+
+
+                <h4>Completed Tasks</h4>
+                <% for(var i = 0; i < complete.length; i++){ %>
+                    <li class = "daily_completed"><input type="checkbox" checked><%= complete[i] %> </li>
+                <% } %>
+                </div>
+            </div>
+
+            <div class = "day">
+                <h3>Sunday</h3>
+                <hr>
+                <div class = "new_daily">
+                    <form
+                        method = "post"
+                        action = "/newdailytask/"
+                    >
+                        <input type = "text" name = "newDaily" placeholder="Add a New Task">
+                        <button>Add Task</button>
+
+                        <% for( var i = 0; i < task.length; i++){ %>
+                            <li class = "daily_task_list"><input type="checkbox" name="check" value="<%= task[i] %>" /> 
+                                <%= task[i] %> </li><% } %>
+
+                        <button formaction = "/completetask/" type = "submit">Mark as Completed</button>
+
+                    </form>
+
+
+                    <h4>Completed Tasks</h4>
+                    <% for(var i = 0; i < complete.length; i++){ %>
+                        <li class = "daily_completed"><input type="checkbox" checked><%= complete[i] %> </li>
+                    <% } %>
+                </div>
+            </div>
+
+        </section>
+
+    </body>
+
+</html>

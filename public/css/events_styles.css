@@ -1,0 +1,197 @@
+/* Stylesheet for index.html Homepage of Project Site */
+* {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Libre Baskerville', sans-serif;
+    background-color:rgb(16, 27, 29);
+}
+
+nav {
+    background-color: rgb(3, 31, 68);
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+label.logo {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    line-height: 70px;
+    width: 20%;
+    margin: 1%;
+    padding: 0 1%;
+    font-weight: bold;
+} 
+
+ul {
+    float: right;
+    margin-right: 50px;   
+}
+
+li {
+    display: inline-block;
+    margin: 0 15px;
+    line-height: 70px;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.active {
+    background-color:rgb(8, 115, 119);
+}
+
+a:hover {
+    background-color: rgb(54, 64, 77);
+    color: rgb(47, 181, 185);
+}
+
+/* Style Upcoming Events Section */
+/* Style left title section */
+.left_title {
+    width: 100%;
+    height: 100%;
+}
+
+.left_title .left_box {
+    width: 40%;
+    height: 100%;
+    float: left;
+    padding: 50px;
+    box-sizing: border-box;
+    margin-top: 200px;
+}
+
+.left_title .left_box .left_content {
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, .5);
+    padding: 40px;
+    transition: .5s;
+}
+
+.left_box .left_content:hover {
+    background:rgb(47, 181, 185);
+}
+
+.left_title .left_box .left_content h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.left_title .left_box .left_content p {
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+/* Style Event Cards Section */
+.event_cards {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    background: rgba(134, 134, 134, 0.5);
+    float: right;
+    box-sizing: border-box;
+    /* Move container down vertically */
+    margin-top: 100px;
+}
+
+.event_container h3 {
+    color:rgb(255, 255, 255);
+    font-size: 50px;
+    text-align: center;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.event_container .event {
+    box-shadow: 0 4p 16px -8px rgba(104, 104, 104, 0.3);
+    display: flex;
+    border-radius: 5px;
+    margin: 32px 0;
+}
+
+.event_container .event .event_left {
+    background: rgb(0, 0, 0);
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 48px;
+    border-radius: 5px 0 0 5px;
+    transition: .5s;
+}
+
+.event_container .event .event_left:hover {
+    background:rgb(47, 181, 185);
+}
+
+.event_container .event .event_right {
+    background: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    padding: 8px 48px;
+    border-radius: 0 5px 5px 0;
+}
+
+.event_container .event .event_right p {
+    padding: 5px 30px;
+}
+
+.event_container .event .event_right .event_time {
+    border-style: solid;
+    width: 20%;
+    border-radius: 5%;
+    margin: 2%;
+    padding: 1%;
+}
+
+/* Style Date and Month text */
+.event_container .event .event_left .event_date p {
+    color:rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Style Create New Event Box */
+.event_container .add_event {
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    border-radius: 5px;
+    margin: 32px 0;
+    padding: 30px 48px;
+    border-radius: 5px;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+.event_container .add_event:hover {
+    background: rgb(47, 181, 185);
+    color: rgb(255, 254, 254);
+}
+
+
+h4 {
+    color:rgb(255, 255, 255);
+    font-size: 25px;
+}
+
+
