@@ -61,3 +61,144 @@ a:hover {
     color: rgb(47, 181, 185);
 }
 
+h1{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding-top: 100px;
+    padding-bottom: 10x;
+}
+h3 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.months_menu {
+    float: left;
+    display: flex;
+    position: relative;
+}
+
+.months_menu .month_sidebar {
+    width: 200px;
+    height: 100%;
+    background: rgb(3, 31, 68);
+    padding: 30px 0;
+}
+
+.month_list {
+    display: block;
+    margin-top: 10%;
+}
+
+.month_list li {
+    margin-top: 10px;
+}
+
+
+/* Style Calendar */
+h2 {
+    color:rgb(62, 231, 236);
+}
+
+.calendar_container{
+    position: relative;
+    top: 25%;
+    left: 15%;
+    border: 10px;
+    margin: auto;
+    padding: 5px;
+}
+
+
+th {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.calendar_layout {
+    background: rgb(80, 87, 97);
+}
+
+#october_monthly {
+    position: relative;
+    right: 5%;
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    vertical-align: top;
+    color: white;
+}
+
+span{
+    display: block;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    visibility: hidden;
+}
+
+td:active {
+    background:rgb(47, 181, 185);
+}
+
+td:active>span{
+    visibility: visible;
+}
+td:hover>span{
+    visibility: visible;
+}
+
+/* Style Event Section */
+
+.events {
+    background: rgb(3, 31, 68);
+    float: right;
+    position: sticky;
+    height: 670px;
+    margin:auto;
+    padding: 10px;
+    top: 0;
+    left: 0;
+}
+
+.events .events_list {
+    padding: 50px 0;
+    width: 100%;
+}
+
+.events .events_list li {
+    padding: 20px;
+    background: rgba(110, 118, 129, 0.5);
+    width: 100%;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.events .events_list li .time {
+    color:rgb(255, 255, 255);
+    visibility: visible;
+    display: inline-block;
+}
+
+.events .events_list li .event_name {
+    color:rgb(255, 255, 255);
+    visibility: visible;
+    margin: 20px;
+    display: inline-block;
+}
+
+.events .events_list li .description {
+    color:rgb(255, 255, 255);
+    visibility: visible;
+}
+
+.events .events_list li:hover {
+    background: rgba(160, 172, 189, 0.5);
+}

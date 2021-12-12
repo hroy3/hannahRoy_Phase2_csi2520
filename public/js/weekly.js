@@ -60,6 +60,12 @@ function newTaskCard(text) {
     const title = document.createElement('h2');
     const step = document.createElement('h2');
 
+    let titleInput = document.createElement("input");
+    titleInput.type = "text";
+    titleInput.name = "task_title";
+    titleInput.placeholder = "Task Title";
+    titleInput.className = "create_new_input";
+
     let stepInput = document.createElement("input");
     stepInput.type = "text";
     stepInput.name = "new_step";
@@ -73,6 +79,7 @@ function newTaskCard(text) {
     newCardDiv.appendChild(step);
 
     newCardDiv.appendChild(stepInput);
+    newCardDiv.appendChild(titleInput);
     document.querySelector(".task_card").appendChild(newCardDiv);
 }
 

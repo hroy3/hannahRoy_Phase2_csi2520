@@ -56,26 +56,33 @@
     
                     <div class = "event_right">
                         <!-- <h4 class = "event_title">Title</h4> -->
-                        <button>Add</button>
-                        <input class = "event_title" name = "event_title" type = "text" placeholder = "Title">
-    
-                        <!-- <p class = "event_description">Description</p> -->
-                        <input class = "event_description" name = "event_description" type = "text" placeholder = "Description">
-                        <input type = date name = "event_date">
-    
-                        <!-- <p class = "event_time">Time</p> -->
-                        <input class = "event_time" name = "event_time" type = "text" placeholder = "Time">
+                        <form class = "event_right"
+                            method = "post"
+                            action = "/newevent/"
+                        >
+                            
+                            <input class = "event_title" name = "event_title" type = "text" placeholder = "Title">
+        
+                            <!-- <p class = "event_description">Description</p> -->
+                            <input class = "event_description" name = "event_description" type = "text" placeholder = "Description">
+                            <input type = date name = "event_date">
+        
+                            <!-- <p class = "event_time">Time</p> -->
+                            <input class = "event_time" name = "event_time" type = "time" placeholder = "Time">
+
+                            <button>Add</button>
+                        </form>
 
                     </div>
                 </div>
 
                 <div class = "event">
-                    
+                    <div class = event_right>
+                        <% for( var i = 0; i < eventTitleArray.length; i++){ %>
+                            <li class = "event_input_list">
+                                <%= eventTitleArray[i] %> </li><% } %>
+                    </div>
                 </div>
-
-                
-
-                
 
                 <!-- <div class = "add_event">
                     <h4 class = "new_event">Create New</h4>

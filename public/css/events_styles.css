@@ -36,7 +36,7 @@ ul {
     margin-right: 50px;   
 }
 
-li {
+nav li {
     display: inline-block;
     margin: 0 15px;
     line-height: 70px;
@@ -195,3 +195,7 @@ h4 {
 }
 
 
+.event_input_list {
+    padding: 5px;
+    margin: 5px;
+}

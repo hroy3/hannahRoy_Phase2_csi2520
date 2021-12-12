@@ -33,24 +33,9 @@
         <h2>Weekly Tasks</h2>
 
         <section class = "tasks_container">
-            <!-- <button id = delete_task_card>Delete Tasks</button> -->
             <div class = "task_card">
                 <!-- Create New Task -->
                     <div id = "add_task_card" >
-                        <!-- <form 
-                            class = "create_new"
-                            method = "post"
-                            action = "/newtaskcard/"
-                        >
-                            <h3>Create New Task</h3>
-                            <progress id = "progress" value = "0" max = "100">0%</progress>
-                            <button>Create New Task</button>
-
-                            <input type = "text" class = "create_new_input" placeholder = "Task Title" name = "task_title" aria-label="new_step">
-                                    
-                            <input type = "text" class = "create_new_input" placeholder = "Add a Step" name = "new_step" aria-label="new_step">
-                            
-                        </form> -->
                         <div class = "task">
                             <input type = "text" class = "create_new_input" placeholder = "Task Title" 
                                 id = "task_title" aria-label="new_step">
@@ -61,16 +46,6 @@
                             <button id = "newcardbutton">Create New Task</button>
                         </div>   
                     </div>
-
-                    <!-- <div class = "task_card_input">
-                        <% for( var i = 0; i < title.length; i++){ %>
-                            <li class = "task_title_input"> 
-                                <%= title[i] %> </li><% } %>
-
-                        <% for( var i = 0; i < steps.length; i++){ %>
-                            <li class = "task_step_input"> <input type="checkbox" name="check" value="<%= steps[i] %>" /> 
-                            <%= steps[i] %> </li><% } %>   
-                    </div> -->     
                     
                 </div>
 
@@ -87,23 +62,23 @@
                 <div class = "new_daily">
                     <form
                         method = "post"
-                        action = "/newdailytask/"
+                        action = "/newdailytaskmonday/"
                     >
-                        <input type = "text" name = "newDaily" placeholder="Add a New Task">
+                        <input type = "text" name = "newDailyMonday" placeholder="Add a New Task">
                         <button>Add Task</button>
 
-                        <% for( var i = 0; i < task.length; i++){ %>
-                            <li class = "daily_task_list"><input type="checkbox" name="check" value="<%= task[i] %>" /> 
-                                <%= task[i] %> </li><% } %>
+                        <% for( var i = 0; i < taskMonday.length; i++){ %>
+                            <li class = "daily_task_list"><input type="checkbox" name="check" value="<%= taskMonday[i] %>" /> 
+                                <%= taskMonday[i] %> </li><% } %>
 
-                        <button formaction = "/completetask/" type = "submit">Mark as Completed</button>
+                        <button formaction = "/completetaskmonday/" type = "submit">Mark as Completed</button>
 
                     </form>
 
 
                     <h4>Completed Tasks</h4>
-                    <% for(var i = 0; i < complete.length; i++){ %>
-                        <li class = "daily_completed"><input type="checkbox" checked><%= complete[i] %> </li>
+                    <% for(var i = 0; i < completeMonday.length; i++){ %>
+                        <li class = "daily_completed"><input type="checkbox" checked><%= completeMonday[i] %> </li>
                     <% } %>
                     
                 </div>
@@ -116,23 +91,23 @@
                 <div class = "new_daily">
                     <form
                         method = "post"
-                        action = "/newdailytask/"
+                        action = "/newdailytasktuesday/"
                     >
-                        <input type = "text" name = "newDaily" placeholder="Add a New Task">
+                        <input type = "text" name = "newDailyTuesday" placeholder="Add a New Task">
                         <button>Add Task</button>
 
-                        <% for( var i = 0; i < task.length; i++){ %>
-                            <li class = "daily_task_list"><input type="checkbox" name="check" value="<%= task[i] %>" /> 
-                                <%= task[i] %> </li><% } %>
+                        <% for( var i = 0; i < taskTuesday.length; i++){ %>
+                            <li class = "daily_task_list"><input type="checkbox" name="check" value="<%= taskTuesday[i] %>" /> 
+                                <%= taskTuesday[i] %> </li><% } %>
 
-                        <button formaction = "/completetask/" type = "submit">Mark as Completed</button>
+                        <button formaction = "/completetasktuesday/" type = "submit">Mark as Completed</button>
 
                     </form>
 
 
                     <h4>Completed Tasks</h4>
-                    <% for(var i = 0; i < complete.length; i++){ %>
-                        <li class = "daily_completed"><input type="checkbox" checked><%= complete[i] %> </li>
+                    <% for(var i = 0; i < completeTuesday.length; i++){ %>
+                        <li class = "daily_completed"><input type="checkbox" checked><%= completeTuesday[i] %> </li>
                     <% } %>
                 </div>
             </div>
@@ -143,23 +118,23 @@
                 <div class = "new_daily">
                     <form
                     method = "post"
-                    action = "/newdailytask/"
+                    action = "/newdailytaskwednesday/"
                 >
-                    <input type = "text" name = "newDaily" placeholder="Add a New Task">
+                    <input type = "text" name = "newDailyWednesday" placeholder="Add a New Task">
                     <button>Add Task</button>
 
-                    <% for( var i = 0; i < task.length; i++){ %>
-                        <li class = "daily_task_list"><input type="checkbox" name="check" value="<%= task[i] %>" /> 
-                            <%= task[i] %> </li><% } %>
+                    <% for( var i = 0; i < taskWednesday.length; i++){ %>
+                        <li class = "daily_task_list"><input type="checkbox" name="check" value="<%= taskWednesday[i] %>" /> 
+                            <%= taskWednesday[i] %> </li><% } %>
 
-                    <button formaction = "/completetask/" type = "submit">Mark as Completed</button>
+                    <button formaction = "/completetaskwednesday/" type = "submit">Mark as Completed</button>
 
                 </form>
 
 
                 <h4>Completed Tasks</h4>
-                <% for(var i = 0; i < complete.length; i++){ %>
-                    <li class = "daily_completed"><input type="checkbox" checked><%= complete[i] %> </li>
+                <% for(var i = 0; i < completeWednesday.length; i++){ %>
+                    <li class = "daily_completed"><input type="checkbox" checked><%= completeWednesday[i] %> </li>
                 <% } %>
                 </div>
             </div>
@@ -170,23 +145,23 @@
                 <div class = "new_daily">
                     <form
                         method = "post"
-                        action = "/newdailytask/"
+                        action = "/newdailytaskthursday/"
                     >
-                        <input type = "text" name = "newDaily" placeholder="Add a New Task">
+                        <input type = "text" name = "newDailyThursday" placeholder="Add a New Task">
                         <button>Add Task</button>
 
-                        <% for( var i = 0; i < task.length; i++){ %>
-                            <li class = "daily_task_list"><input type="checkbox" name="check" value="<%= task[i] %>" /> 
-                                <%= task[i] %> </li><% } %>
+                        <% for( var i = 0; i < taskThursday.length; i++){ %>
+                            <li class = "daily_task_list"><input type="checkbox" name="check" value="<%= taskThursday[i] %>" /> 
+                                <%= taskThursday[i] %> </li><% } %>
 
-                        <button formaction = "/completetask/" type = "submit">Mark as Completed</button>
+                        <button formaction = "/completetaskthursday/" type = "submit">Mark as Completed</button>
 
                     </form>
 
 
                     <h4>Completed Tasks</h4>
-                    <% for(var i = 0; i < complete.length; i++){ %>
-                        <li class = "daily_completed"><input type="checkbox" checked><%= complete[i] %> </li>
+                    <% for(var i = 0; i < completeThursday.length; i++){ %>
+                        <li class = "daily_completed"><input type="checkbox" checked><%= completeThursday[i] %> </li>
                     <% } %>
                     
                 </div>
@@ -198,23 +173,23 @@
                 <div class = "new_daily">
                     <form
                         method = "post"
-                        action = "/newdailytask/"
+                        action = "/newdailytaskfriday/"
                     >
-                        <input type = "text" name = "newDaily" placeholder="Add a New Task">
+                        <input type = "text" name = "newDailyFriday" placeholder="Add a New Task">
                         <button>Add Task</button>
 
-                        <% for( var i = 0; i < task.length; i++){ %>
-                            <li class = "daily_task_list"><input type="checkbox" name="check" value="<%= task[i] %>" /> 
-                                <%= task[i] %> </li><% } %>
+                        <% for( var i = 0; i < taskFriday.length; i++){ %>
+                            <li class = "daily_task_list"><input type="checkbox" name="check" value="<%= taskFriday[i] %>" /> 
+                                <%= taskFriday[i] %> </li><% } %>
 
-                        <button formaction = "/completetask/" type = "submit">Mark as Completed</button>
+                        <button formaction = "/completetaskfriday/" type = "submit">Mark as Completed</button>
 
                     </form>
 
 
                     <h4>Completed Tasks</h4>
-                    <% for(var i = 0; i < complete.length; i++){ %>
-                        <li class = "daily_completed"><input type="checkbox" checked><%= complete[i] %> </li>
+                    <% for(var i = 0; i < completeFriday.length; i++){ %>
+                        <li class = "daily_completed"><input type="checkbox" checked><%= completeFriday[i] %> </li>
                     <% } %>
                 </div>
             </div>
@@ -225,23 +200,23 @@
                 <div class = "new_daily">
                     <form
                     method = "post"
-                    action = "/newdailytask/"
+                    action = "/newdailytasksaturday/"
                 >
-                    <input type = "text" name = "newDaily" placeholder="Add a New Task">
+                    <input type = "text" name = "newDailySaturday" placeholder="Add a New Task">
                     <button>Add Task</button>
 
-                    <% for( var i = 0; i < task.length; i++){ %>
-                        <li class = "daily_task_list"><input type="checkbox" name="check" value="<%= task[i] %>" /> 
-                            <%= task[i] %> </li><% } %>
+                    <% for( var i = 0; i < taskSaturday.length; i++){ %>
+                        <li class = "daily_task_list"><input type="checkbox" name="check" value="<%= taskSaturday[i] %>" /> 
+                            <%= taskSaturday[i] %> </li><% } %>
 
-                    <button formaction = "/completetask/" type = "submit">Mark as Completed</button>
+                    <button formaction = "/completetasksaturday/" type = "submit">Mark as Completed</button>
 
                 </form>
 
 
                 <h4>Completed Tasks</h4>
-                <% for(var i = 0; i < complete.length; i++){ %>
-                    <li class = "daily_completed"><input type="checkbox" checked><%= complete[i] %> </li>
+                <% for(var i = 0; i < completeSaturday.length; i++){ %>
+                    <li class = "daily_completed"><input type="checkbox" checked><%= completeSaturday[i] %> </li>
                 <% } %>
                 </div>
             </div>
@@ -252,23 +227,23 @@
                 <div class = "new_daily">
                     <form
                         method = "post"
-                        action = "/newdailytask/"
+                        action = "/newdailytasksunday/"
                     >
-                        <input type = "text" name = "newDaily" placeholder="Add a New Task">
+                        <input type = "text" name = "newDailySunday" placeholder="Add a New Task">
                         <button>Add Task</button>
 
-                        <% for( var i = 0; i < task.length; i++){ %>
-                            <li class = "daily_task_list"><input type="checkbox" name="check" value="<%= task[i] %>" /> 
-                                <%= task[i] %> </li><% } %>
+                        <% for( var i = 0; i < taskSunday.length; i++){ %>
+                            <li class = "daily_task_list"><input type="checkbox" name="check" value="<%= taskSunday[i] %>" /> 
+                                <%= taskSunday[i] %> </li><% } %>
 
-                        <button formaction = "/completetask/" type = "submit">Mark as Completed</button>
+                        <button formaction = "/completetasksunday/" type = "submit">Mark as Completed</button>
 
                     </form>
 
 
                     <h4>Completed Tasks</h4>
-                    <% for(var i = 0; i < complete.length; i++){ %>
-                        <li class = "daily_completed"><input type="checkbox" checked><%= complete[i] %> </li>
+                    <% for(var i = 0; i < completeSunday.length; i++){ %>
+                        <li class = "daily_completed"><input type="checkbox" checked><%= completeSunday[i] %> </li>
                     <% } %>
                 </div>
             </div>
