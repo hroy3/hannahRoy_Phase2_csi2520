@@ -36,21 +36,11 @@ let deleteButton = document.querySelector('#delete_task_card');
 //     form.appendChild(submit);
 //     form.appendChild(titleInput);
 //     form.appendChild(stepInput);
-//     // form.appendChild(titleInputDiv);
-//     // newCardDiv.appendChild(deleteBtn);
 //     newCardDiv.appendChild(form);
 
 //     document.querySelector(".task_card").appendChild(newCardDiv);
 
 // }
-
-// var cardArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
-
-// document.getElementById("delete_task_card").addEventListener("click", () => {
-//     localStorage.clear();
-//     // flashcards.innerHTML = '';
-//     cardArray = [];
-//   });
   
 
 function newTaskCard(text) {
